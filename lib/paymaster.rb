@@ -1,5 +1,10 @@
-require "paymaster/version"
+require "active_support"
+require "active_support/core_ext"
 
-module Paymaster
-  # Your code goes here...
-end
+require "paymaster/version"
+require "paymaster/errors"
+require "paymaster/base"
+require "paymaster/get_transaction"
+require "paymaster/refund"
+require "paymaster/url_generator"
+require "paymaster/client"
