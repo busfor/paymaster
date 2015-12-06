@@ -3,7 +3,6 @@ require "active_support"
 require "active_support/core_ext"
 
 require "paymaster/version"
-require "paymaster/errors"
 require "paymaster/request_error"
 require "paymaster/base_request"
 require "paymaster/base_response"
