@@ -8,6 +8,10 @@ module Paymaster
       end
     end
 
+    def error?
+      false
+    end
+
     class << self
       def parse(body)
         response = Hash.from_xml(body)["Response"]

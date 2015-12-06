@@ -9,5 +9,9 @@ module Paymaster
       self.error_code = response["Retval"].to_i
       self.error_message = response["Retdesc"]
     end
+
+    def error?
+      true
+    end
   end
 end
