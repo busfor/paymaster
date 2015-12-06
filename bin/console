@@ -6,9 +6,9 @@ require "paymaster"
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
 
-client = Paymaster::Client.new(merchant_id: 123, secret_key: "secret")
-url = client.generate_url(amount: 150, description: "Test", number: "7654321")
-transaction = client.get_transaction(payment_id: 7654321)
+# client = Paymaster::Client.new(merchant_id: 123, secret_key: "secret")
+# url = client.generate_url(amount: 150, description: "Test", number: "7654321")
+# transaction = client.get_transaction(payment_id: 7654321)
 # refund = client.refund(paymaster_id: 18769413, total: 150, refund_amount: 100, refund_id: 76543211)
 
 require "pry"
