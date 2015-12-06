@@ -1,5 +1,5 @@
 module Paymaster
-  class UrlGenerator < Base
+  class UrlGenerator < BaseRequest
     attr_accessor :amount
     attr_accessor :number
     attr_accessor :description
@@ -39,8 +39,6 @@ module Paymaster
     def generate
       "#{endpoint}?#{params_as_string}"
     end
-
-    private
 
     def methods(method)
       return unless method

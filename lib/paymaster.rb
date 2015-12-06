@@ -1,9 +1,12 @@
+require "faraday"
 require "active_support"
 require "active_support/core_ext"
 
 require "paymaster/version"
 require "paymaster/errors"
-require "paymaster/base"
+require "paymaster/request_error"
+require "paymaster/base_request"
+require "paymaster/base_response"
 require "paymaster/get_transaction"
 require "paymaster/refund"
 require "paymaster/url_generator"
