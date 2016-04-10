@@ -30,8 +30,8 @@ client = Paymaster::Client.new(merchant_id: 123, secret_key: "secret")
 Then you can generate payment link:
 
 ```ruby
-url = client.generate_url(amount: 150, description: "Test", number: "7654321")
-# => "https://lmi.paymaster.ua/index/get?LMI_MERCHANT_ID=123&LMI_PAYMENT_AMOUNT=150&LMI_PAYMENT_NO=7654321&LMI_PAYMENT_DESC=Test&LMI_HASH=473035659648C1F3AF99F1E2E7B1A2863144916C908AE990C5E8F42EF2577465"
+url = client.generate_url(amount: 150, description: "Test", number: "7654321", locale: "uk")
+# => "https://lmi.paymaster.ua/uk/index/get?LMI_MERCHANT_ID=123&LMI_PAYMENT_AMOUNT=150&LMI_PAYMENT_NO=7654321&LMI_PAYMENT_DESC=Test&LMI_HASH=473035659648C1F3AF99F1E2E7B1A2863144916C908AE990C5E8F42EF2577465"
 ```
 
 Fetch information about existing transaction:

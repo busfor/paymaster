@@ -1,5 +1,6 @@
 module Paymaster
   class UrlGenerator < BaseRequest
+    attr_accessor :locale
     attr_accessor :amount
     attr_accessor :number
     attr_accessor :description
@@ -14,7 +15,7 @@ module Paymaster
     attr_accessor :sim_mode
 
     def endpoint
-      "https://lmi.paymaster.ua/index/get"
+      "https://lmi.paymaster.ua/#{fetch_locale}/index/get"
     end
 
     def params
@@ -58,6 +59,12 @@ module Paymaster
 
     def params_as_string
       params.map { |k, v| "#{k}=#{v}" }.join("&")
+    end
+
+    private
+
+    def fetch_locale
+      locale.to_s.in?(%w[ru uk en]) ? locale : "ru"
     end
   end
 end
